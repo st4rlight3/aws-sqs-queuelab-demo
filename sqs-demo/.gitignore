@@ -1,0 +1,7 @@
+__pycache__/
+data/
+.queuelab_aws.json
+*.pem
+*.env
+.venv/
+test-results.json

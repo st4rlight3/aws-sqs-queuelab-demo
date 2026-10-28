@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-28",
+  "service": "Amazon SQS",
+  "method": "AWS Management Console; manual send and receive",
+  "region": "ap-southeast-2",
+  "source_queue": "queuelab-20261028-demo2-orders",
+  "dead_letter_queue": "queuelab-20261028-demo2-dlq",
+  "queue_type": "Standard",
+  "encryption": "SSE-SQS",
+  "visibility_timeout_seconds": 10,
+  "max_receive_count": 3,
+  "source_retention_seconds": 86400,
+  "dlq_retention_seconds": 172800,
+  "message_id": "fb964418-f45d-479d-8254-d9504e68badd",
+  "order_id": "QL-a1b2c3d4e5",
+  "observations": [
+    "Both queues created successfully with owner-only access",
+    "Same Message ID received from source with Receive count 1, 2, 3",
+    "No DeleteMessage performed",
+    "After another receive attempt, same Message ID was received from DLQ with Receive count 4"
+  ],
+  "not_verified": [
+    "No live Boto3 application integration run",
+    "No live AWS business worker result",
+    "No live AWS DeleteMessage path"
+  ],
+  "environment_limit": "AWS CloudShell account verification pending",
+  "resource_disposition": "Queues and fake message retained; no purge or deletion",
+  "console_dlq_redrive_allow_policy": "AWS default same-account same-region allowance; setup.py uses a stricter byQueue policy"
+}

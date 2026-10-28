@@ -1,0 +1,11 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "QueueLabRuntimeOnly",
+      "Effect": "Allow",
+      "Action": ["sqs:SendMessage", "sqs:ReceiveMessage", "sqs:DeleteMessage", "sqs:ChangeMessageVisibility", "sqs:GetQueueAttributes"],
+      "Resource": ["arn:aws:sqs:REGION:ACCOUNT_ID:YOUR_DEMO_MAIN_QUEUE", "arn:aws:sqs:REGION:ACCOUNT_ID:YOUR_DEMO_DLQ"]
+    }
+  ]
+}
